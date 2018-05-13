@@ -1,0 +1,25 @@
+// Mixins. Use keyword:
+
+@mixin banner {
+    width: 100%;
+    position: relative;
+    color: white;
+    .banner-content {
+        position: absolute;
+        width: 100%;
+        top: 58px;
+    }
+    img {
+        width: 100%;
+    }
+    span {
+        font-size: $bannerHeading;
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    span.title {
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+}
