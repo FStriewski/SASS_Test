@@ -3,10 +3,33 @@
 // Variables:
 $deepBlue : #032f3e;
 $sectionHeading : 24px;
+$offWhite: #f8f9fb;
 
-
+// nested styles
 #main-nav{
     background: $deepBlue;
+    ul{
+        width: 100%;
+    }
+    li{
+        float: left;
+        width: 14%;
+    }
+    a{
+        color: $offWhite;
+        text-decoration: none;
+        padding: 16px;
+        text-align: center;
+        display: block;
+    }
+}//end main nav
+
+// Clearfix because of float. Clears parents styles on itself.
+// If an element is taller than its container, use this.
+#main-nav ul:after{
+    content: "";
+    clear: both; // clears li tags before it
+    display: block;
 }
 
 section h1{
