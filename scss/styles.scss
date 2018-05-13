@@ -4,6 +4,35 @@
 $deepBlue : #032f3e;
 $sectionHeading : 24px;
 $offWhite: #f8f9fb;
+$bannerHeading: 46px;
+
+// Mixins. Use keyword:
+@mixin banner {
+    width: 100%;
+    position: relative;
+    color: white;
+
+    .banner-content{
+        position: absolute;
+        width: 100%;
+        top: 58px;
+    }
+    img{
+        width: 100%;
+    }
+    span{
+        font-size: $bannerHeading;
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    span.title{
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+}
+
+
 
 // nested styles
 #main-nav{
@@ -35,4 +64,21 @@ $offWhite: #f8f9fb;
 section h1{
     font-size: $sectionHeading;
     color: $deepBlue;
+}
+
+
+// Add mixin def to lead banner
+.lead-banner {
+    @include banner;
+    text-align: right;
+}
+
+.lessons-banner{
+    @include banner;
+    li{
+        text-transform: uppercase;
+        font-size: 20px;
+        max-width: 500px;
+        margin: 60px;
+    }
 }
